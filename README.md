@@ -1,23 +1,42 @@
-<div align="center">
+<p align="center">
+  <strong>Interaktives Business-Intelligence-Praxisprojekt</strong>
+</p>
 
-# 🍬 Zuckerglanz GmbH
+<p align="center">
+  Analyse von Umsatz · Gewinn · Kunden · Produkten · Qualität · Regionen
+</p>
 
-### Power-BI-Praxisprojekt zur Unternehmensanalyse
+<p align="center">
+  <a href="https://designlili.github.io/Zuckerglanz-GmbH/">
+    <img
+      src="screenshots_01_Geschaeftsueberblick.png"
+      alt="Zuckerglanz GmbH Power BI Dashboard"
+      width="100%">
+  </a>
+</p>
 
-Interaktives Business-Intelligence-Dashboard zur Analyse von  
-**Umsatz, Gewinn, Kunden, Produkten, Qualität und Regionen**
+<p align="center">
+  <a href="https://designlili.github.io/Zuckerglanz-GmbH/">
+    <strong>▶ Interaktives Dashboard öffnen</strong>
+  </a>
+</p>
 
-<br>
-
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![DAX](https://img.shields.io/badge/DAX-Kennzahlen-6A5ACD?style=for-the-badge)
-![Power Query](https://img.shields.io/badge/Power%20Query-Datenaufbereitung-217346?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Abgeschlossen-success?style=for-the-badge)
-
-</div>
+<p align="center">
+  <img
+    src="https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=flat-square&logo=powerbi&logoColor=black"
+    alt="Power BI">
+  <img
+    src="https://img.shields.io/badge/Power%20Query-Datenaufbereitung-217346?style=flat-square"
+    alt="Power Query">
+  <img
+    src="https://img.shields.io/badge/DAX-Kennzahlen-8E5BA6?style=flat-square"
+    alt="DAX">
+  <img
+    src="https://img.shields.io/badge/Projekt-Abgeschlossen-43A047?style=flat-square"
+    alt="Projekt abgeschlossen">
+</p>
 
 ---
-
 ## 📊 Projektüberblick
 
 Die **Zuckerglanz GmbH** ist ein fiktives Unternehmen aus der Süßwarenbranche.
