@@ -2,91 +2,350 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-    <title>Zuckerglanz GmbH – Power BI Dashboard</title>
+  <meta
+    name="description"
+    content="Interaktives Power-BI-Praxisprojekt der Zuckerglanz GmbH">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <title>Zuckerglanz GmbH – Power BI Dashboard</title>
 
-        body {
-            margin: 0;
-            padding: 30px;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #fff5fa;
-            color: #333333;
-        }
+  <style>
+    :root {
+      --pink-dark: #8f287d;
+      --pink: #d95ca8;
+      --pink-light: #f8cdea;
+      --purple: #8154b3;
+      --blue-light: #dff6ff;
+      --white: #ffffff;
+      --text: #3d2d3b;
+      --shadow: rgba(99, 43, 88, 0.22);
+    }
 
-        .container {
-            width: 100%;
-            max-width: 1300px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        h1 {
-            margin-bottom: 10px;
-            color: #8f3f70;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .beschreibung {
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 28px;
+      overflow-x: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(
+          circle at 10% 15%,
+          rgba(255, 192, 224, 0.65),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(192, 238, 255, 0.65),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #fff4fa 0%,
+          #fce8f6 48%,
+          #eaf8ff 100%
+        );
+    }
 
-        .dashboard {
-            width: 100%;
-            padding: 12px;
-            background-color: white;
-            border-radius: 16px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
-        }
+    body::before,
+    body::after {
+      position: fixed;
+      z-index: -1;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      content: "";
+      filter: blur(5px);
+      opacity: 0.45;
+      animation: schweben 7s ease-in-out infinite;
+    }
 
-        .dashboard iframe {
-            display: block;
-            width: 100%;
-            height: 720px;
-            border: none;
-            border-radius: 10px;
-        }
+    body::before {
+      top: 8%;
+      left: -100px;
+      background: #ffc9e6;
+    }
 
-        @media (max-width: 800px) {
-            body {
-                padding: 15px;
-            }
+    body::after {
+      right: -100px;
+      bottom: 6%;
+      background: #cfefff;
+      animation-delay: 1.5s;
+    }
 
-            .dashboard iframe {
-                height: 600px;
-            }
-        }
-    </style>
+    .container {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .header {
+      margin-bottom: 26px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--purple);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.15;
+      color: var(--pink-dark);
+      text-shadow:
+        0 0 8px rgba(217, 92, 168, 0.25),
+        0 0 18px rgba(217, 92, 168, 0.2);
+      animation: leuchten 2.4s ease-in-out infinite;
+    }
+
+    .subtitle {
+      max-width: 850px;
+      margin: 14px auto 0;
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.65;
+      color: #604d5d;
+    }
+
+    .technologien {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 13px;
+      border: 1px solid rgba(143, 40, 125, 0.14);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--pink-dark);
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(99, 43, 88, 0.08);
+    }
+
+    .dashboard-box {
+      width: 100%;
+      padding: 12px;
+      overflow: hidden;
+      border: 2px solid var(--pink-light);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow:
+        0 16px 45px var(--shadow),
+        0 0 0 6px rgba(255, 255, 255, 0.42);
+    }
+
+    .dashboard-box iframe {
+      display: block;
+      width: 100%;
+      height: min(82vh, 860px);
+      min-height: 680px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--white);
+    }
+
+    .hinweis {
+      margin: 18px auto 0;
+      color: #6f5c6b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .aktionen {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      border-radius: 999px;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      background:
+        linear-gradient(
+          135deg,
+          var(--pink-dark),
+          var(--pink)
+        );
+      box-shadow: 0 8px 20px rgba(143, 40, 125, 0.24);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 11px 25px rgba(143, 40, 125, 0.32);
+    }
+
+    .button.secondary {
+      color: var(--pink-dark);
+      border: 1px solid var(--pink-light);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    footer {
+      margin-top: 28px;
+      color: #7a6776;
+      font-size: 13px;
+    }
+
+    @keyframes leuchten {
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        text-shadow:
+          0 0 7px rgba(217, 92, 168, 0.25),
+          0 0 18px rgba(217, 92, 168, 0.18);
+      }
+
+      50% {
+        opacity: 0.8;
+        transform: scale(1.015);
+        text-shadow:
+          0 0 12px rgba(217, 92, 168, 0.55),
+          0 0 30px rgba(217, 92, 168, 0.38);
+      }
+    }
+
+    @keyframes schweben {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-24px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      body {
+        padding: 14px;
+      }
+
+      .dashboard-box {
+        padding: 7px;
+        border-radius: 16px;
+      }
+
+      .dashboard-box iframe {
+        height: 76vh;
+        min-height: 600px;
+        border-radius: 10px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <main class="container">
+  <main class="container">
 
-        <h1>Zuckerglanz GmbH</h1>
+    <header class="header">
 
-        <p class="beschreibung">
-            Interaktives Power-BI-Praxisprojekt zur Analyse von Umsatz,
-            Gewinn, Kunden, Produkten und Regionen.
-        </p>
+      <p class="eyebrow">
+        Business Intelligence · Power BI
+      </p>
 
-        <div class="dashboard">
+      <h1>🍬 Zuckerglanz GmbH</h1>
 
-      
+      <p class="subtitle">
+        Interaktives Power-BI-Praxisprojekt zur Analyse von Umsatz,
+        Gewinn, Kunden, Produkten, Qualität und Regionen.
+      </p>
 
-        </div>
+      <div class="technologien">
+        <span class="badge">Power BI</span>
+        <span class="badge">Power Query</span>
+        <span class="badge">DAX</span>
+        <span class="badge">Datenmodellierung</span>
+        <span class="badge">Was-wäre-wenn-Simulation</span>
+      </div>
 
-    </main>
+    </header>
+
+    <section
+      class="dashboard-box"
+      aria-label="Interaktives Power-BI-Dashboard">
+
+      <iframe
+        title="Zuckerglanz GmbH – Power BI Dashboard"
+        src="https://app.powerbi.com/reportEmbed?reportId=3a7b8a08-9fb3-4831-80c4-6dc7113e72e6&amp;autoAuth=true&amp;ctid=0dd47679-b4a9-46d9-a858-6819737af921"
+        allowfullscreen="true"
+        loading="eager">
+      </iframe>
+
+    </section>
+
+    <p class="hinweis">
+      Nutze die Filter, Schaltflächen, Tooltips, Drilldowns und
+      Simulationen direkt im Dashboard.
+      Beim ersten Öffnen kann eine Microsoft-Anmeldung erforderlich sein.
+    </p>
+
+    <div class="aktionen">
+
+      <a
+        class="button"
+        href="https://app.powerbi.com/reportEmbed?reportId=3a7b8a08-9fb3-4831-80c4-6dc7113e72e6&amp;autoAuth=true&amp;ctid=0dd47679-b4a9-46d9-a858-6819737af921"
+        target="_blank"
+        rel="noopener noreferrer">
+        Dashboard im Vollbild öffnen
+      </a>
+
+      <a
+        class="button secondary"
+        href="https://github.com/designlili/Zuckerglanz-GmbH">
+        Zur Projektdokumentation
+      </a>
+
+    </div>
+
+    <footer>
+      Erstellt von Lili Kárándi · Power BI · Power Query · DAX
+    </footer>
+
+  </main>
 
 </body>
 
