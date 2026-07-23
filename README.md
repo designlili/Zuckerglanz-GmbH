@@ -1,142 +1,242 @@
-<!DOCTYPE html>
-<html lang="de">
+<p align="center">
+  <a href="https://designlili.github.io/Zuckerglanz-GmbH/">
+    <img
+      src="https://readme-typing-svg.demolab.com?font=Montserrat&weight=700&size=34&duration=2400&pause=900&color=C85F98&center=true&vCenter=true&repeat=true&width=900&height=75&lines=%F0%9F%8D%AC+Zuckerglanz+GmbH;Power+BI+%C2%B7+Power+Query+%C2%B7+DAX;Daten+verstehen.+Entscheidungen+verbessern."
+      alt="Zuckerglanz GmbH">
+  </a>
+</p>
 
-<head>
-  <meta charset="UTF-8">
+<p align="center">
+  <strong>Interaktives Business-Intelligence-Praxisprojekt</strong>
+</p>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+<p align="center">
+  Analyse von Umsatz · Gewinn · Kunden · Produkten · Qualität · Regionen
+</p>
 
-  <title>Zuckerglanz GmbH – Power BI Dashboard</title>
+<p align="center">
+  <a href="https://designlili.github.io/Zuckerglanz-GmbH/">
+    <img
+      src="screenshots_01_Geschaeftsueberblick.png"
+      alt="Zuckerglanz GmbH Power BI Dashboard"
+      width="100%">
+  </a>
+</p>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<p align="center">
+  <a href="https://designlili.github.io/Zuckerglanz-GmbH/">
+    <img
+      src="https://img.shields.io/badge/▶%20INTERAKTIVES%20DASHBOARD-ÖFFNEN-C85F98?style=for-the-badge"
+      alt="Interaktives Dashboard öffnen">
+  </a>
+</p>
 
-    body {
-      margin: 0;
-      padding: 30px;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        linear-gradient(
-          135deg,
-          #fff4fa 0%,
-          #fbe7f5 50%,
-          #eef9ff 100%
-        );
-      color: #3f2940;
-    }
+<p align="center">
+  <img
+    src="https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=flat-square&logo=powerbi&logoColor=black"
+    alt="Power BI">
+  <img
+    src="https://img.shields.io/badge/Power%20Query-Datenaufbereitung-217346?style=flat-square"
+    alt="Power Query">
+  <img
+    src="https://img.shields.io/badge/DAX-Kennzahlen-8E5BA6?style=flat-square"
+    alt="DAX">
+  <img
+    src="https://img.shields.io/badge/Status-Abgeschlossen-43A047?style=flat-square"
+    alt="Projekt abgeschlossen">
+</p>
 
-    .container {
-      width: 100%;
-      max-width: 1450px;
-      margin: 0 auto;
-      text-align: center;
-    }
+---
 
-    h1 {
-      margin: 0 0 10px;
-      font-size: 42px;
-      color: #93278f;
-    }
+## 📊 Projektüberblick
 
-    .subtitle {
-      margin: 0 0 25px;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+Die **Zuckerglanz GmbH** ist ein fiktives Unternehmen aus der Süßwarenbranche.
 
-    .dashboard-box {
-      width: 100%;
-      padding: 12px;
-      background: #ffffff;
-      border: 2px solid #f2b4de;
-      border-radius: 20px;
-      box-shadow: 0 10px 35px rgba(105, 44, 92, 0.18);
-    }
+Im Rahmen dieses Praxisprojekts wurde eine vollständige Business-Intelligence-Lösung mit **Microsoft Power BI** entwickelt. Die Ausgangsdaten wurden mit **Power Query** geprüft, bereinigt und transformiert. Anschließend wurden die Tabellen in einem strukturierten Datenmodell miteinander verbunden und mithilfe von **DAX-Kennzahlen** analysiert.
 
-    .dashboard-box iframe {
-      display: block;
-      width: 100%;
-      height: 790px;
-      border: 0;
-      border-radius: 14px;
-      background: #ffffff;
-    }
+Ziel des Projekts war es, wirtschaftliche Entwicklungen transparent darzustellen, Optimierungspotenziale zu erkennen und konkrete Handlungsempfehlungen für das Management abzuleiten.
 
-    .hinweis {
-      margin-top: 18px;
-      font-size: 14px;
-      color: #6b5969;
-    }
+---
 
-    .github-link {
-      display: inline-block;
-      margin-top: 10px;
-      color: #93278f;
-      font-weight: bold;
-      text-decoration: none;
-    }
+## 🌐 Interaktives Dashboard
 
-    .github-link:hover {
-      text-decoration: underline;
-    }
+Das vollständige Power-BI-Dashboard kann über GitHub Pages geöffnet werden:
 
-    @media (max-width: 900px) {
-      body {
-        padding: 12px;
-      }
+### 👉 [Zuckerglanz Power-BI-Dashboard öffnen](https://designlili.github.io/Zuckerglanz-GmbH/)
 
-      h1 {
-        font-size: 30px;
-      }
+Enthalten sind unter anderem:
 
-      .subtitle {
-        font-size: 16px;
-      }
+- interaktive Datenschnitte
+- Drilldown und Drill-through
+- dynamische Tooltips
+- KPI- und Zielanalysen
+- Produkt- und Kundenrankings
+- regionale Analysen
+- Absatz- und Rabattsimulationen
+- dynamische Managementempfehlungen
 
-      .dashboard-box iframe {
-        height: 650px;
-      }
-    }
-  </style>
-</head>
+---
 
-<body>
+## 🎯 Projektziele
 
-  <main class="container">
+- Entwicklung eines professionellen Power-BI-Dashboards
+- Bereinigung und Transformation der Ausgangsdaten
+- Aufbau eines strukturierten Datenmodells
+- Erstellung aussagekräftiger DAX-Kennzahlen
+- Analyse von Umsatz, Kosten, Gewinn und Marge
+- Bewertung von Kunden, Produkten und Regionen
+- Untersuchung von Qualität und Kundenzufriedenheit
+- Simulation von Absatz- und Rabattveränderungen
+- Ableitung strategischer Handlungsempfehlungen
 
-    <h1>🍬 Zuckerglanz GmbH</h1>
+---
 
-    <p class="subtitle">
-      Interaktives Power-BI-Praxisprojekt zur Analyse von
-      Umsatz, Gewinn, Kunden, Produkten, Qualität und Regionen.
-    </p>
+## 📈 Zentrale Kennzahlen
 
-    <div class="dashboard-box">
+| Kennzahl | Ergebnis |
+|---|---:|
+| Gesamtumsatz | 4,71 Mio. € |
+| Gesamtgewinn | 2,52 Mio. € |
+| Gewinnmarge | 53,47 % |
+| Kunden | ca. 2.300 |
+| Bestellungen | ca. 14.000 |
+| Durchschnittlicher Warenkorb | 341,36 € |
+| Wiederkaufrate | 85,83 % |
+| Durchschnittliche Bewertung | 3,8 von 5 |
+| Retourenquote | 12,18 % |
+| Umsatzziel erreicht | 99,8 % |
+| Gewinnziel erreicht | 85,4 % |
 
-      <iframe
-        title="Zuckerglanz GmbH – Power BI Dashboard"
-        src="https://app.powerbi.com/reportEmbed?reportId=3a7b8a08-9fb3-4831-80c4-6dc7113e72e6&amp;autoAuth=true&amp;ctid=0dd47679-b4a9-46d9-a858-6819737af921"
-        allowfullscreen="true">
-      </iframe>
+---
 
-    </div>
+## 🔍 Dashboard-Bereiche
 
-    <p class="hinweis">
-      Nutze die Filter, Schaltflächen, Tooltips und Drilldowns direkt im Dashboard.
-    </p>
+| Nr. | Analysebereich | Schwerpunkt |
+|---:|---|---|
+| 01 | Geschäftsüberblick | Kennzahlen, Zielerreichung und Entwicklung |
+| 02 | Finanzanalyse | Umsatz, Kosten, Gewinn und Marge |
+| 03 | Kundenanalyse | Kundentypen, Kundenbindung und Wiederkauf |
+| 04 | Produktanalyse | Produktleistung, Gewinn und Rankings |
+| 05 | Verkauf und Bestellungen | Warenkorb, Zahlungsarten und Bestellstatus |
+| 06 | Qualität und Service | Bewertungen, Retouren und Zufriedenheit |
+| 07 | Markt und Regionen | Länder, Städte und regionale Verteilung |
+| 08 | Profit-Simulation | Unternehmensweite Absatz- und Rabattszenarien |
+| 09 | Produkt-Simulation | Simulation einzelner Bonbonsorten |
+| 10 | SWOT-Analyse | Stärken, Schwächen, Chancen und Risiken |
+| 11 | Maßnahmenplan | Strategische Handlungsempfehlungen |
 
-    <a
-      class="github-link"
-      href="https://github.com/designlili/Zuckerglanz-GmbH">
-      ← Zurück zur Projektdokumentation auf GitHub
-    </a>
+---
 
-  </main>
+## 💡 Wichtigste Erkenntnisse
 
-</body>
+- Die Gewinnmarge liegt mit **53,47 %** auf einem hohen Niveau.
+- Das Umsatzziel wurde mit **99,8 %** nahezu vollständig erreicht.
+- Beim Gewinnziel besteht mit **85,4 %** weiteres Potenzial.
+- Firmenkunden bilden die umsatzstärkste Kundengruppe.
+- Deutschland ist mit **77,85 % Umsatzanteil** der wichtigste Markt.
+- Die Wiederkaufrate von **85,83 %** zeigt eine starke Kundenbindung.
+- Margenstarke Produkte sollten gezielt gefördert werden.
+- Bei Retouren und Kundenzufriedenheit bestehen Optimierungsmöglichkeiten.
+- Rabatte sollten kontrolliert und produktspezifisch eingesetzt werden.
 
-</html>
+---
+
+## 🧪 Simulation
+
+Mithilfe von Was-wäre-wenn-Parametern können unterschiedliche Absatz- und Rabattszenarien untersucht werden.
+
+| Simulationskennzahl | Ergebnis |
+|---|---:|
+| Simulierter Umsatz | 6,31 Mio. € |
+| Simulierter Gewinn | 3,28 Mio. € |
+| Möglicher Mehrgewinn | ca. 762 Tsd. € |
+
+Die Ergebnisse ermöglichen einen direkten Vergleich zwischen dem aktuellen Stand und möglichen zukünftigen Entwicklungen.
+
+---
+
+## 🧩 Datenmodell
+
+Das Datenmodell wurde nach dem Prinzip eines strukturierten Sternschemas aufgebaut.
+
+### Verwendete Tabellen
+
+- `_Measures`
+- `Bestellungen`
+- `Bestellpositionen`
+- `Kunden`
+- `Bonbon_Produkte`
+- `Kalender`
+- `Finanz Brücke`
+
+Die Tabellen wurden über eindeutige Schlüssel miteinander verbunden. Eine separate Kalendertabelle ermöglicht konsistente zeitbezogene Analysen und den Einsatz von DAX-Zeitintelligenz.
+
+---
+
+## 🛠️ Verwendete Technologien
+
+| Technologie | Verwendung |
+|---|---|
+| Microsoft Power BI | Dashboard und Visualisierungen |
+| Power Query | Datenbereinigung und Transformation |
+| DAX | Kennzahlen und Berechnungen |
+| Datenmodellierung | Beziehungen und Sternschema |
+| CSV | Ausgangsdaten |
+| GitHub | Projektdokumentation |
+| GitHub Pages | Veröffentlichung des Dashboards |
+| HTML und CSS | Gestaltung der Dashboard-Webseite |
+
+---
+
+## ⚙️ Umgesetzte Funktionen
+
+- Interaktive Datenschnitte
+- Drilldown und Drill-through
+- Dynamische Tooltips
+- KPI-Karten
+- Zeitintelligenz
+- Zielerreichungsanalysen
+- Produkt- und Kundenrankings
+- Regionale Kartenvisualisierung
+- Analysebaum
+- Was-wäre-wenn-Parameter
+- Absatz- und Rabattsimulationen
+- Dynamische Managementempfehlungen
+- SWOT-Analyse
+- Strategischer Maßnahmenplan
+
+---
+
+## 🏆 Projektergebnis
+
+Das Projekt bildet den vollständigen Ablauf eines Business-Intelligence-Projekts ab:
+
+<p align="center">
+  <strong>
+    Datenimport → Datenbereinigung → Datenmodellierung → DAX → Visualisierung → Analyse → Simulation → Handlungsempfehlungen
+  </strong>
+</p>
+
+Das Dashboard unterstützt datenbasierte Entscheidungen und stellt komplexe wirtschaftliche Zusammenhänge übersichtlich und verständlich dar.
+
+---
+
+## ℹ️ Hinweis
+
+Bei der **Zuckerglanz GmbH** handelt es sich um ein fiktives Praxisprojekt.
+
+Die verwendeten Unternehmens-, Kunden-, Produkt- und Bestelldaten wurden ausschließlich zu Lern-, Analyse- und Demonstrationszwecken erstellt. Es werden keine echten personenbezogenen Kundendaten verwendet.
+
+---
+
+<p align="center">
+  <strong>Erstellt von Lili Kárándi</strong>
+</p>
+
+<p align="center">
+  Power BI · Power Query · DAX · Datenanalyse · Business Intelligence
+</p>
+
+<p align="center">
+  🍬 Entwickelt mit Microsoft Power BI
+</p>
