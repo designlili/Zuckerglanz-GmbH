@@ -41,7 +41,7 @@ Das vollständige Power-BI-Dashboard kann über GitHub Pages interaktiv geöffne
 
 ## 🖼️ Dashboard-Vorschau
 
-[![Geschäftsüberblick](screenshots/01_Geschaeftsueberblick.png)](https://designlili.github.io/Zuckerglanz-GmbH/)
+[![Geschäftsüberblick](screenshots_01_Geschaeftsueberblick.png)](https://designlili.github.io/Zuckerglanz_GmbH/)
 
 *Klicke auf das Bild, um das interaktive Dashboard zu öffnen.*
 
